@@ -18,6 +18,19 @@ Bộ tài liệu đặc tả & hướng dẫn nằm trong [`docs/`](./docs/):
 | 03 | [Hướng dẫn cài đặt & sử dụng](./docs/03-HUONG-DAN-CAI-DAT-VA-SU-DUNG.md) | Cài đặt, cấu hình, deploy, hướng dẫn theo vai trò, xử lý sự cố |
 | 04 | [Kiểm tra & bàn giao](./docs/04-KIEM-TRA-VA-BAN-GIAO.md) | Checklist nghiệm thu, 31 khiếm khuyết, kế hoạch khắc phục |
 | 05 | [Phụ lục kỹ thuật](./docs/05-PHU-LUC-KY-THUAT.md) | Dependency, endpoint REST, topic STOMP, biến môi trường, quy trình phát triển |
+| 06 | [Báo cáo giao diện](./docs/06-BAO-CAO-GIAO-DIEN.md) | 30 ảnh chụp màn hình thật của cả 3 vai trò + nhận xét nghiệm thu |
+
+### Báo cáo Word/PDF (để nộp)
+
+| Tệp | Mô tả |
+|---|---|
+| [`Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.docx`](./Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.docx) | Báo cáo 27 trang A4, 30 hình, có mục lục đánh số trang thật + phụ lục danh mục hình |
+| [`Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.pdf`](./Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.pdf) | Bản PDF để in/đọc nhanh |
+| [`Tai-lieu-ban-giao-PITECHLAB-Dynamic-Portfolio.docx`](./Tai-lieu-ban-giao-PITECHLAB-Dynamic-Portfolio.docx) | Bộ tài liệu đặc tả & bàn giao (69 trang) |
+
+> Ảnh trong báo cáo được chụp tự động từ môi trường chạy thật bằng
+> `scripts/capture_screenshots.cjs`; báo cáo sinh lại bằng
+> `scripts/build_screenshot_report.py`. Xem [hướng dẫn chụp ảnh](#-tái-tạo-ảnh-giao-dien).
 
 ---
 
@@ -64,6 +77,35 @@ Mở trình duyệt: **http://localhost:3000**
 npm run build     # → dist/
 npm run preview   # xem trước bản build
 ```
+
+---
+
+## 📸 Tái tạo ảnh giao diện
+
+Bộ 30 ảnh trong [`assets/screenshots/`](./assets/screenshots/) được chụp tự động từ
+môi trường chạy thật (không dùng ảnh mock).
+
+```bash
+# 1. Khởi động backend giả lập (khi chưa có backend Spring Boot thật)
+python3 -m venv .venv-mock
+.venv-mock/bin/pip install uvicorn python-multipart fastapi
+.venv-mock/bin/python scripts/mock_backend.py --port 8080
+
+# 2. Khởi động frontend
+npm install
+cp .env.example .env.local
+npx vite --host 127.0.0.1 --port 3011
+
+# 3. Chụp ảnh (cần Google Chrome + puppeteer-core)
+npm install --no-save puppeteer-core
+node scripts/capture_screenshots.cjs
+
+# 4. Sinh lại báo cáo Word + Markdown
+python3 scripts/build_screenshot_report.py     # → .docx (2 pass: đo trang rồi điền mục lục)
+python3 scripts/build_screenshot_report_md.py  # → docs/06-BAO-CAO-GIAO-DIEN.md
+```
+
+Ảnh được chụp ở viewport 1600×1000 px, mật độ 2× (DPR 2) nên in rất sắc nét.
 
 ---
 
