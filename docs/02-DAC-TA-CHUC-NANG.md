@@ -61,6 +61,15 @@
 
 ## 3. Đặc tả màn hình công khai (`pages/Home.tsx`)
 
+
+<!--SHOT-DONE:<!--SHOT:projects-->-->
+![Section Dự án trên trang công khai](../assets/screenshots/03_home_projects.png)
+
+**Section Dự án trên trang công khai**
+
+> Lưới thẻ dự án hiển thị ảnh đại diện, tên, mô tả rút gọn và danh sách công nghệ. Nhấn vào thẻ sẽ mở modal chi tiết.
+
+
 ### 3.1. Cấu trúc trang
 
 | # | Section | `id` | Điều kiện hiển thị | Nội dung |
@@ -164,6 +173,15 @@ https://<host>/#/view/<profileId>                            ← không mã tổ
 **Lỗi:** nếu `avatarUrl` lỗi → thay bằng `https://via.placeholder.com/200?text=Profile`.
 
 ### 3.7. UC-06 — Xem chi tiết dự án
+
+
+<!--SHOT-DONE:<!--SHOT:project-modal-->-->
+![Modal chi tiết dự án](../assets/screenshots/09_home_project_modal.png)
+
+**Modal chi tiết dự án**
+
+> Modal hiển thị đầy đủ mô tả, vai trò đảm nhiệm, khách hàng, công nghệ sử dụng và liên kết tới mã nguồn / bản demo. Đóng bằng phím Esc hoặc nút ×.
+
 
 | Bước | Hành vi |
 |---|---|
@@ -293,6 +311,8 @@ https://<host>/#/view/<profileId>                            ← không mã tổ
 
 ## 6. Đặc tả đăng nhập (`pages/Login.tsx`)
 
+<!--SHOT:login-->
+
 ### 6.1. UC-09 — Đăng nhập
 
 **Kích hoạt:** Truy cập `/login` (tự động khi truy cập `/admin` hoặc `/user` mà không có token).
@@ -361,6 +381,15 @@ Sidebar thu gọn còn 80px ở màn hình hẹp; nhãn tab chỉ hiện từ br
 
 ### 7.2. Các tab
 
+
+<!--SHOT-DONE:<!--SHOT:admin-profile-list-->-->
+![Tab Profile List — danh sách hồ sơ nhân sự](../assets/screenshots/12_admin_profile_list.png)
+
+**Tab Profile List — danh sách hồ sơ nhân sự**
+
+> Quản trị viên công khai (Public) hoặc xóa (Del) hồ sơ; dữ liệu phân trang với tham số page/size, mặc định 6 bản ghi mỗi trang.
+
+
 #### 7.2.1. Tab `chat` (mặc định)
 
 **UC-17 — Trả lời chat khách.**
@@ -419,6 +448,15 @@ Header: Authorization: Bearer {token}
 **Hạn chế:** chế độ "đổi mật khẩu" **chưa được nối API** — hiện chỉ hiện thông báo *"Tính năng đổi mật khẩu user khác cần API Backend hỗ trợ!"*. Nút `(Dev: Switch Mode)` cho phép ép chuyển chế độ thủ công.
 
 #### 7.2.4. Tab `organization` — UC-13, UC-14
+
+
+<!--SHOT-DONE:<!--SHOT:admin-org-->-->
+![Tab Organization — cây tổ chức ba cấp](../assets/screenshots/15_admin_organization.png)
+
+**Tab Organization — cây tổ chức ba cấp**
+
+> Quản lý độc lập ba cấp: Vùng → Chi nhánh → Phòng ban. Khi gán hồ sơ vào phòng ban, ứng dụng sinh tự động đường dẫn chia sẻ theo mã vùng/mã chi nhánh/mã phòng ban.
+
 
 Gồm 2 phần.
 
@@ -544,6 +582,15 @@ Sáu tab: `projects`, `skills`, `experience`, `education`, `publications`, `even
 | Màu chủ đạo | Cam | Xanh dương |
 
 ### 8.2. UC-19 — Quản lý hồ sơ cá nhân
+
+
+<!--SHOT-DONE:<!--SHOT:user-projects-->-->
+![Tab Projects trong trang người dùng](../assets/screenshots/24_user_projects.png)
+
+**Tab Projects trong trang người dùng**
+
+> Nhân sự tự thêm, sửa, xóa dự án của mình mà không cần quản trị viên can thiệp.
+
 
 **Tải dữ liệu:** `GET /user/profile`. Response có thể là **mảng** → lấy phần tử đầu tiên; hoặc là object → dùng trực tiếp. Lưu `profileId` vào `localStorage`.
 

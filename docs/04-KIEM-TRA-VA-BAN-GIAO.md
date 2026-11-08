@@ -47,6 +47,15 @@ Các bước dưới đây đã được **thực thi thật** trên môi trư�
 
 ### 2.2. Vai trò Admin
 
+
+<!--SHOT-DONE:<!--SHOT:admin-profile-list-->-->
+![Hiện thực chức năng công khai / xóa hồ sơ](../assets/screenshots/12_admin_profile_list.png)
+
+**Hiện thực chức năng công khai / xóa hồ sơ**
+
+> Kiểm chứng mục A-05: nút Public trong tab `profile-list` đưa hồ sơ sang trạng thái công khai, nút Del xóa hồ sơ kèm hộp thoại xác nhận.
+
+
 | # | Hạng mục | Bước kiểm | Kỳ vọng | Đạt |
 |---|---|---|---|---|
 | A-01 | Đăng nhập | `/login` với tài khoản ADMIN | Lưu token/role; chuyển `/admin` | ⏳ |
@@ -70,6 +79,15 @@ Các bước dưới đây đã được **thực thi thật** trên môi trư�
 | A-19 | Đăng xuất | Nút logout sidebar | `localStorage.clear()` → về `/login` | ⏳ |
 
 ### 2.3. Vai trò User
+
+
+<!--SHOT-DONE:<!--SHOT:user-projects-->-->
+![Hiện thực chức năng người dùng tự quản lý dự án](../assets/screenshots/24_user_projects.png)
+
+**Hiện thực chức năng người dùng tự quản lý dự án**
+
+> Kiểm chứng mục U-03: thêm / sửa / xóa dự án trong tab `projects` của trang `/user`.
+
 
 | # | Hạng mục | Bước kiểm | Kỳ vọng | Đạt |
 |---|---|---|---|---|

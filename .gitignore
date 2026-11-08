@@ -36,3 +36,6 @@ coverage
 # ảnh chụp & báo cáo sinh tự động
 .venv-mock/
 node_modules/
+
+# file khoá tạm của LibreOffice
+.~lock.*

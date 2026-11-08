@@ -279,6 +279,15 @@ Vite **chỉ đọc biến môi trường lúc build**, không phải lúc runti
 
 ### 6.1. Khách truy cập
 
+
+<!--SHOT-DONE:<!--SHOT:home-footer-->-->
+![Chân trang trang chủ — nơi đặt thông tin liên hệ](../assets/screenshots/08_home_footer.png)
+
+**Chân trang trang chủ — nơi đặt thông tin liên hệ**
+
+> Chân trang chứa thông tin liên hệ (email, GitHub, LinkedIn) và nút tải CV.
+
+
 | Bước | Thao tác |
 |---|---|
 | 1 | Mở đường dẫn được chia sẻ, ví dụ `https://cv.pitechlab.vn/#/view/MB/HN/IT/12` |
@@ -295,7 +304,25 @@ Vite **chỉ đọc biến môi trường lúc build**, không phải lúc runti
 
 ### 6.2. Quản trị viên (Admin)
 
+
+<!--SHOT-DONE:<!--SHOT:login-->-->
+![Trang đăng nhập — bước đăng nhập đầu tiên](../assets/screenshots/10_login.png)
+
+**Trang đăng nhập — bước đăng nhập đầu tiên**
+
+> Mở `/login`, nhập tài khoản được cấp ở tab `account` của quản trị viên. Hệ thống tự chuyển hướng theo vai trò.
+
+
 **Đăng nhập:** `/login` → nhập tài khoản → tự động vào `/admin`.
+
+
+<!--SHOT-DONE:<!--SHOT:admin-profile-list-->-->
+![Bảng điều khiển quản trị — bước kiểm tra danh sách hồ sơ](../assets/screenshots/12_admin_profile_list.png)
+
+**Bảng điều khiển quản trị — bước kiểm tra danh sách hồ sơ**
+
+> Sau khi đăng nhập bằng tài khoản ADMIN, bạn sẽ thấy bảng điều khiển này. Danh sách hồ sơ nằm ở tab `profile-list`.
+
 
 **Các tab và thứ tự thao tác thường dùng:**
 
@@ -315,9 +342,36 @@ Vite **chỉ đọc biến môi trường lúc build**, không phải lúc runti
 - Khi gán tổ chức, link chia sẻ cập nhật tự động — bấm nút copy để lấy.
 - Nút **Save Changes** chỉ lưu thông tin chung; các section khác có nút lưu riêng trong modal.
 
+
+<!--SHOT-DONE:<!--SHOT:admin-org-->-->
+![Gán tổ chức và lấy link chia sẻ](../assets/screenshots/15_admin_organization.png)
+
+**Gán tổ chức và lấy link chia sẻ**
+
+> Tại tab `organization`, chọn Phòng ban cho hồ sơ rồi bấm nút copy để lấy đường dẫn chia sẻ dạng `/#/view/{mã vùng}/{mã chi nhánh}/{mã phòng ban}/{profileId}`.
+
+
+
+<!--SHOT-DONE:<!--SHOT:admin-chat-->-->
+![Trả lời tin nhắn của khách truy cập](../assets/screenshots/11_admin_chat_inbox.png)
+
+**Trả lời tin nhắn của khách truy cập**
+
+> Khách gửi tin từ widget chat góc phải trang chủ. Tin hiển thị ở đây kèm bộ đếm tin chưa đọc; nút camera cho phép gọi video WebRTC trực tiếp.
+
+
 ### 6.3. Nhân sự (User)
 
 **Đăng nhập:** `/login` → tự động vào `/user`.
+
+
+<!--SHOT-DONE:<!--SHOT:user-password-->-->
+![Đổi mật khẩu ở trang người dùng](../assets/screenshots/30_user_password.png)
+
+**Đổi mật khẩu ở trang người dùng**
+
+> Tab `change-password` yêu cầu nhập mật khẩu hiện tại trước khi đặt mật khẩu mới.
+
 
 | Bước | Thao tác |
 |---|---|

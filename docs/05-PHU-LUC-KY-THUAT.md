@@ -53,6 +53,15 @@ Base URL: `{VITE_API_URL}/api/v1` (trừ `/auth/login` dùng `{VITE_API_URL}/api
 
 > **Lưu ý:** bảng này ghi nhận endpoint **frontend đang gọi**, dựa trên mã nguồn. Trạng thái cột "Gọi" cho biết hàm có thực sự được dùng hay không.
 
+
+<!--SHOT-DONE:<!--SHOT:home-hero-->-->
+![Giao diện trang công khai — tham chiếu cho mô hình dữ liệu](../assets/screenshots/01_home_hero.png)
+
+**Giao diện trang công khai — tham chiếu cho mô hình dữ liệu**
+
+> Dữ liệu hiển thị trên trang này ánh xạ trực tiếp từ payload `GET /api/v1/portfolio` qua hàm `mapBackendToFrontend` trong `services/api.ts`.
+
+
 ### 2.1. Portfolio (công khai)
 
 | Method | Đường dẫn | Hàm gọi | Gọi từ | Trạng thái |

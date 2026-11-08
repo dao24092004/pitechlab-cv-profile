@@ -17,7 +17,7 @@ import docx
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Pt, RGBColor
+from docx.shared import Cm, Pt, RGBColor
 
 REPO = Path(__file__).resolve().parent.parent
 DOCS = REPO / "docs"
@@ -32,6 +32,7 @@ ORDER = [
     "03-HUONG-DAN-CAI-DAT-VA-SU-DUNG.md",
     "04-KIEM-TRA-VA-BAN-GIAO.md",
     "05-PHU-LUC-KY-THUAT.md",
+    "06-BAO-CAO-GIAO-DIEN.md",
 ]
 
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")
@@ -67,7 +68,11 @@ def build_merged():
                 for l in lines
             ]
         chunks.append("\n".join(lines))
-    MERGED.write_text("\n\n".join(chunks), encoding="utf-8")
+    merged = "\n\n".join(chunks)
+    # đường dẫn ảnh trong docs/ là tương đối so với docs/ → đổi sang tuyệt đối
+    # để pandoc (chạy trên /tmp/merged.md) vẫn tìm thấy tệp ảnh.
+    merged = merged.replace("(../assets/", f"({REPO}/assets/")
+    MERGED.write_text(merged, encoding="utf-8")
     print(f"merged -> {MERGED}")
 
 
@@ -248,6 +253,13 @@ def shade_header_rows(doc):
     print(f"header rows shaded: {n}")
 
 
+def set_a4(doc):
+    """Đặt khổ A4 cho toàn bộ section (mặc định pandoc để khổ Letter)."""
+    for section in doc.sections:
+        section.page_width = Cm(21.0)
+        section.page_height = Cm(29.7)
+
+
 def add_footer_page_numbers(doc):
     for section in doc.sections:
         footer = section.footer
@@ -286,6 +298,7 @@ def main():
     build_merged()
     run_pandoc()
     doc = docx.Document(str(OUT))
+    set_a4(doc)
     build_cover(doc)
     fix_code_paragraphs(doc)
     fix_tables(doc)

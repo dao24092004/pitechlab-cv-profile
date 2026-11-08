@@ -33,7 +33,16 @@ Bộ tài liệu này dùng cho **hai mục tiêu tách biệt**:
 | 03 | [Hướng dẫn cài đặt & sử dụng](./03-HUONG-DAN-CAI-DAT-VA-SU-DUNG.md) | Cài đặt, cấu hình môi trường, build, deploy, hướng dẫn dùng từng vai trò, xử lý sự cố | Người vận hành, dev mới |
 | 04 | [Kiểm tra & bàn giao](./04-KIEM-TRA-VA-BAN-GIAO.md) | Checklist nghiệm thu theo vai trò, danh sách khiếm khuyết đã biết, kế hoạch khắc phục | Người nghiệm thu, quản lý dự án |
 | 05 | [Phụ lục kỹ thuật](./05-PHU-LUC-KY-THUAT.md) | Danh mục phụ thuộc, endpoint REST, topic STOMP, biến môi trường, quy ước mã nguồn | Dev |
+| 06 | [Báo cáo giao diện](./06-BAO-CAO-GIAO-DIEN.md) | 30 ảnh chụp màn hình thật của cả 3 vai trò + nhận xét nghiệm thu | Người nghiệm thu, GV |
 | — | [README.md](../README.md) | Hướng dẫn chạy nhanh 5 phút | Tất cả |
+
+### Báo cáo Word/PDF (để nộp)
+
+| Tệp | Mô tả |
+|---|---|
+| [`Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.docx`](../Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.docx) | Báo cáo 27 trang A4, 30 hình, mục lục có số trang thật + phụ lục danh mục hình |
+| [`Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.pdf`](../Bao-cao-giao-dien-PITECHLAB-Dynamic-Portfolio.pdf) | Bản PDF để in/đọc nhanh |
+| [`Tai-lieu-ban-giao-PITECHLAB-Dynamic-Portfolio.docx`](../Tai-lieu-ban-giao-PITECHLAB-Dynamic-Portfolio.docx) | Bộ tài liệu đặc tả & bàn giao gộp (69 trang) |
 
 ---
 

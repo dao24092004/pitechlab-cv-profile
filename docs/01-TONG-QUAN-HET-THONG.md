@@ -276,6 +276,23 @@ còn lại          → ${API_BASE_URL}${"/" + path}   (URL tương đối từ 
 
 ### 5.1. Vai trò và quyền
 
+
+<!--SHOT-DONE:<!--SHOT:admin-->-->
+![Bảng điều khiển quản trị — màn hình hộp thư chat](../assets/screenshots/11_admin_chat_inbox.png)
+
+**Bảng điều khiển quản trị — màn hình hộp thư chat**
+
+> Khung bên trái là 12 nhóm chức năng quản trị, khung bên phải hiển thị nội dung theo tab đang chọn (mặc định là Chat). Đây là nơi quản trị viên trả lời tin nhắn và tiếp nhận cuộc gọi video của khách truy cập.
+
+
+<!--SHOT-DONE:<!--SHOT:user-->-->
+![Bảng điều khiển người dùng — trang tự quản lý hồ sơ](../assets/screenshots/23_user_dashboard.png)
+
+**Bảng điều khiển người dùng — trang tự quản lý hồ sơ**
+
+> Mỗi nhân sự có vùng quản lý riêng gồm 9 tab: hồ sơ, dự án, kỹ năng, kinh nghiệm, học vấn, công bố, sự kiện, đổi mật khẩu và đăng xuất.
+
+
 | Vai trò | Biến `role` trong localStorage | Đường dẫn | Quyền |
 |---|---|---|---|
 | **Khách ẩn danh** | (không có) | `/`, `/view/...` | Xem portfolio công khai, chat, gọi video |
@@ -440,6 +457,15 @@ Mỗi thao tác CRUD kết thúc bằng `reloadProfileData()` → `GET /admin/po
 ---
 
 ## 8. Hệ thống giao diện
+
+
+<!--SHOT-DONE:<!--SHOT:home-hero-->-->
+![Trang chủ công khai của hồ sơ năng lực](../assets/screenshots/01_home_hero.png)
+
+**Trang chủ công khai của hồ sơ năng lực**
+
+> Bố cục trang chủ: vùng Hero chiếm một màn hình đầy đủ với nền cảnh 3D (three.js), khối thông tin cá nhân và dải thẻ thống kê. Bên dưới lần lượt là các section Kinh nghiệm, Dự án, Học vấn, Kỹ năng, Công bố, Sự kiện và Chân trang.
+
 
 ### 8.1. Design token (Tailwind)
 
